@@ -35,7 +35,7 @@ Early warning rather than just uptime monitoring
 3. Copy the scripts into that folder.
 
 4. Edit each script and update the server list:
-   $Servers = @("EX1-2016","EX2-2016","EX3-2016")
+   $Servers = @("SERVER-1","SERVER-2","SERVER-3")
 
 5. Create scheduled tasks to run the scripts (e.g. every 5 minutes).
 
@@ -61,7 +61,7 @@ https://yourdomain/monitoring/queuehealth.htm
 
 Use the keyword:
 
-<strong class="OK">OK</strong>
+"<strong class="OK">OK</strong>"
 
 Configure Kuma to alert when the keyword is missing.
 
