@@ -61,7 +61,7 @@ https://yourdomain/monitoring/queuehealth.htm
 
 Use the keyword:
 
-"<strong class="OK">OK</strong>"
+`<strong class="OK">OK</strong>`
 
 Configure Kuma to alert when the keyword is missing.
 
