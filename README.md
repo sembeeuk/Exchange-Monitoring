@@ -57,9 +57,9 @@ This ensures the status page is always available regardless of which server is a
 
 Create an HTTP(s) Keyword Monitor against:
 
-https://yourdomain/monitoring/diskhealth.htm  
-https://yourdomain/monitoring/queuehealth.htm
-https://yourdomain/monitoring/backuphealth.htm
+- https://yourdomain/monitoring/diskhealth.htm  
+- https://yourdomain/monitoring/queuehealth.htm
+- https://yourdomain/monitoring/backuphealth.htm
 
 Use the keyword:
 
