@@ -14,8 +14,9 @@ No sensitive information (disk layout, sizes, queue detail, etc.) is exposed.
 
 ## What this covers
 
-- Disk pressure (primary cause of Exchange back pressure issues)
+- Disk space (primary cause of Exchange back pressure issues)
 - Transport queue health
+- Backup Health Check
 - Standard Exchange healthcheck URLs (for service availability + SSL)
 
 This approach focuses on:
@@ -57,13 +58,14 @@ This ensures the status page is always available regardless of which server is a
 Create an HTTP(s) Keyword Monitor against:
 
 https://yourdomain/monitoring/diskhealth.htm  
-https://yourdomain/monitoring/queuehealth.htm  
+https://yourdomain/monitoring/queuehealth.htm
+https://yourdomain/monitoring/backuphealth.htm
 
 Use the keyword:
 
 `<strong class="OK">OK</strong>`
 
-Configure Kuma to alert when the keyword is missing.
+Configure Uptime Kuma to alert when the keyword is missing.
 
 ### Behaviour
 
