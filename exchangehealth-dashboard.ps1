@@ -261,13 +261,6 @@ body {
   font-size: 1.6rem;
 }
 
-.summary {
-  display: inline-block;
-  padding: 8px 12px;
-  border-radius: 999px;
-  font-weight: bold;
-}
-
 .meta {
   color: var(--muted);
   font-size: 0.9rem;
@@ -313,6 +306,9 @@ body {
   border-top: 1px solid var(--border);
   padding-top: 10px;
   margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .label {
@@ -320,29 +316,11 @@ body {
 }
 
 .check p {
-  margin: 6px 0 0 0;
-  color: var(--muted);
-  font-size: 0.95rem;
+  display: none;
 }
 
 .badge,
 .summary {
-  color: #111;
-}
-
-.OK {
-  background: var(--ok);
-}
-
-.WARNING {
-  background: var(--warning);
-}
-
-.CRITICAL {
-  background: var(--critical);
-}
-
-.badge {
   display: inline-block;
   min-width: 74px;
   text-align: center;
@@ -350,6 +328,27 @@ body {
   border-radius: 999px;
   font-weight: bold;
   font-size: 0.8rem;
+  color: #111;
+}
+
+.summary {
+  min-width: auto;
+  font-size: 0.95rem;
+}
+
+.badge.OK,
+.summary.OK {
+  background: var(--ok);
+}
+
+.badge.WARNING,
+.summary.WARNING {
+  background: var(--warning);
+}
+
+.badge.CRITICAL,
+.summary.CRITICAL {
+  background: var(--critical);
 }
 
 @media (max-width: 520px) {
