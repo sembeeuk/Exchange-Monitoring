@@ -57,9 +57,9 @@ This ensures the status page is always available regardless of which server is a
 
 Create an HTTP(s) Keyword Monitor against:
 
-- https://yourdomain/monitoring/diskhealth.htm  
-- https://yourdomain/monitoring/queuehealth.htm
-- https://yourdomain/monitoring/backuphealth.htm
+- https://mail.example.com/monitoring/diskhealth.htm  
+- https://mail.example.com/monitoring/queuehealth.htm
+- https://mail.example.com/monitoring/backuphealth.htm
 
 Use the keyword:
 
@@ -81,35 +81,35 @@ No update -> Alert
 These can be monitored alongside the scripts for service availability and SSL validation:
 
 Outlook Anywhere (RPC over HTTP):  
-/rpc/healthcheck.htm  
+https://mail.example.com/rpc/healthcheck.htm  
 
 MAPI/HTTP:  
-/mapi/healthcheck.htm  
+https://mail.example.com/mapi/healthcheck.htm  
 
 Outlook Web App (OWA):  
-/owa/healthcheck.htm  
+https://mail.example.com/owa/healthcheck.htm  
 
 Exchange Control Panel (ECP):  
-/ecp/healthcheck.htm  
+https://mail.example.com/ecp/healthcheck.htm  
 
 Exchange ActiveSync:  
-/Microsoft-Server-ActiveSync/healthcheck.htm  
+https://mail.example.com/Microsoft-Server-ActiveSync/healthcheck.htm  
 
 Exchange Web Services (EWS):  
-/ews/healthcheck.htm  
+https://mail.example.com/ews/healthcheck.htm  
 
 Offline Address Book (OAB):  
-/oab/healthcheck.htm  
+https://mail.example.com/oab/healthcheck.htm  
 
 Autodiscover:  
-/Autodiscover/healthcheck.htm  
+https://mail.example.com/Autodiscover/healthcheck.htm  
 
 ---
 
 ## Notes
 
 - Designed for environments where:
-  - Agents are not allowed
+  - Agents are not allowed, or where the agent status cannot be seen by the Exchange server admin. 
   - Legacy OS (e.g. Server 2012 R2) causes TLS/API issues
 - Works well with load-balanced Exchange environments
 - Simple by design — prioritises reliability and low noise over complexity
