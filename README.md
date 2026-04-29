@@ -1,6 +1,6 @@
 # Exchange Monitoring (External / Agentless)
 
-These scripts provide a simple way to monitor Exchange servers from outside the network, where installing traditional monitoring agents is not possible or not allowed.
+These scripts provide a simple way to monitor Exchange servers from outside the network, where installing traditional monitoring agents is not possible or not allowed, or the agent status cannot be seen by the Exchange Server admin. 
 
 They generate lightweight HTML status pages which can be checked by external monitoring tools such as Uptime Kuma.
 
@@ -9,6 +9,8 @@ The output is intentionally minimal and only exposes:
 - Overall status (OK / WARNING / CRITICAL)
 
 No sensitive information (disk layout, sizes, queue detail, etc.) is exposed.
+
+A further script creates a single dashboard which is ideal for an at a glance check. 
 
 ---
 
@@ -37,6 +39,7 @@ Early warning rather than just uptime monitoring
 
 4. Edit each script and update the server list:
    $Servers = @("SERVER-1","SERVER-2","SERVER-3")
+   Also update any threshold settings to suit your own requirements. Remember to update the individual scripts and the dashboard script. 
 
 5. Create scheduled tasks to run the scripts (e.g. every 5 minutes).
 
@@ -76,6 +79,12 @@ No update -> Alert
 
 ---
 
+## Dashboard
+
+The dashboard can be viewed at https://mail.example.com/monitoring/exchangehealth.htm
+
+---
+
 ## Exchange Healthcheck URLs
 
 These can be monitored alongside the scripts for service availability and SSL validation:
@@ -108,11 +117,7 @@ https://mail.example.com/Autodiscover/healthcheck.htm
 
 ## Notes
 
-- Designed for environments where:
-  - Agents are not allowed, or where the agent status cannot be seen by the Exchange server admin. 
-  - Legacy OS (e.g. Server 2012 R2) causes TLS/API issues
-- Works well with load-balanced Exchange environments
-- Simple by design — prioritises reliability and low noise over complexity
+- Name your drives - the scripts use the drive names to indicate where there is an issue. 
 
 ---
 
