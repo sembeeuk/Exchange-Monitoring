@@ -61,7 +61,7 @@ $html = @"
 <!doctype html>
 <html>
 <head>
-<title>Exchange Health</title>
+<title>Exchange Disk Health</title>
 <meta http-equiv="refresh" content="60">
 <style>
 body { font-family: Arial, sans-serif; background:#111; color:#eee; }
@@ -76,7 +76,7 @@ th { background:#222; }
 </head>
 <body>
 $statusLine
-<h2>Exchange Health</h2>
+<h2>Exchange Disk Health</h2>
 <p>Overall Status: <strong class="$globalStatus">$globalStatus</strong></p>
 <p class="meta">Last Updated: $now</p>
 
@@ -95,4 +95,4 @@ if (-not (Test-Path $folder)) {
 
 $html | Out-File $OutputPath -Encoding UTF8
 
-Write-Output "Public Exchange health page written to $OutputPath with status $globalStatus"
+Write-Output "Public Exchange disk health page written to $OutputPath with status $globalStatus"
